@@ -34,3 +34,6 @@ Ein Problem, das auftrat, war der Umgang mit mehrfachen Datensätzen für einen 
 
 design probleme im header, gelöst mit flexboxen. container von logo & aq switzerland in zwei flexboxen mit space inbetween
 
+
+Schweiz Karte als SVG da alles andere (containter, flext etc) nicht funktioniert hat. Tipp von Lea bekommen.
+

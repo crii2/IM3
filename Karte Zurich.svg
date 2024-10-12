@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="Zurich.js"></script>
-</head>
-
-<body>
-
-  <header>
-    <nav>
-      <div>
-        <img class="logo" src="Logo/Wind Logo.png" alt="Logo" />
-        <p style="font-family: MADE Tommy Soft;">Air Quality Switzerland</p>
-      </div>
-      <a href="index.html" style="font-family: MADE Tommy Soft;">Home</a>
-    </nav>
-  </header>
-
-  <main>
-      <div class="flex-container">
-        <div style="padding: 15px 15px 15px 100px">
-            <h3 style="font-family: MADE Tommy Soft; text-align: left;" >History of Air Quality in</h3>
-            <h4 style="font-family: MADE Tommy Soft; text-align: left;">ZURICH.</h4>
-        </div>
-
-        <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 885.81 565.4" class="map-container">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 885.81 565.4">
   <defs>
     <style>
       .cls-1 {
@@ -196,59 +167,3 @@
     <circle class="cls-13" cx="521.37" cy="139.38" r="20.5"/>
   </g>
 </svg>
-      </div>
-
-      <div>
-      <h6>AQI, Temperature, And Wind Speed Over The Past 2 Weeks (Zurich)</h6>
-      </div>
-
-      <div class="text-diagramm">
-        <p> 
-          Dieses Diagramm zeigt die Entwicklung der Luftqualität in den letzten zehn Tagen für Zürich. Es stellt den Luftqualitätsindex (AQI), die Temperatur (in °C) und die Windgeschwindigkeit (in km/h) dar. Diese Faktoren helfen dabei zu verstehen, wie die Luftqualität in dieser Region durch lokale Wetterbedingungen beeinflusst wird.
-        </p>
-      </div>
-
-      <canvas id="aqiChart" aria-label="Air Quality Index Chart" role="img"></canvas>
-    </section>
-
-
-    <div class="content-container">
-      <section class="info-section">
-        <h2>Air Quality Index (AQI)</h2>
-
-      <div class="AQI-Text">
-        <p>Der AQI misst die Luftqualität anhand von Schadstoffkonzentrationen wie PM2.5, PM10 und Ozon. Er reicht von 0 (gut) bis über 500 (gefährlich) und bewertet die Gesundheitsrisiken, besonders für empfindliche Gruppen. Je höher der AQI, desto größer die Gesundheitsgefahr.</p>
-      </div>
-        <br>
-        <br>
-      <div class="richtwerte">
-        <p>Was sind die Richtwerte?</p>
-      </div>
-        <br>
-        <ul>
-          <li data-tooltip="Keine bis geringe Gesundheitsrisiken">0-50 (Gut)</li>
-          <li data-tooltip="Empfindliche Gruppen könnten beeinträchtigt sein">51-100 (Mäßig)</li>
-          <li data-tooltip="Risiken für Personen mit gesundheitlicher Vorbelastung">101-150 (Ungesund für empfindliche Gruppen)</li>
-          <li data-tooltip="Gesundheitsrisiken für die allgemeine Bevölkerung">151-200 (Ungesund)</li>
-          <li data-tooltip="Starke gesundheitliche Beeinträchtigungen für alle">201-300 (Sehr ungesund)</li>
-          <li data-tooltip="Ernsthafte Gesundheitsrisiken für gesamte Bevölkerung">301-500+ (Gefährlich)</li>
-        </ul>
-      </section>
-
-  </main>
-
-<footer class="footer">
-  <div class="footer-content">
-      <p>Air Quality der letzten 10 Tage in:</p>
-      <div class="city-list">
-          <span class="city"><a href=zurich.html>ZURICH</a></span>
-          <span class="city"><a href=chur.html>CHUR</a></span>
-          <span class="city"><a href=lugano.html>LUGANO</a></span>
-          <span class="city"><a href=davos.html>DAVOS</a></span>
-          <span class="city"><a href=bern.html>BERN</a></span>
-          <span class="city"><a href=jungfraujoch.html>JUNGFRAUJOCH</a></span>
-          <span class="city"><a href=martigny_combe.html>MARTIGNY-COMBE</a></span>
-      </div>
-  </div>
-</body>
-</html>

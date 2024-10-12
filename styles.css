@@ -12,7 +12,6 @@ body {
   font-family: 'MADE Tommy Soft', sans-serif;
   background-color: #f0f4fa;
   background: linear-gradient(180deg, #EDF1F6 85%, #D0E3FF 100%);
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -72,7 +71,6 @@ h2 {
 
 h3, h4 {
   text-align: Left;
-  color: #081F5C;
   margin: 40px;
 }
 
@@ -80,118 +78,192 @@ h3 {
   font-size: 40px;
   margin-bottom: 10px;
   margin-top: 125px;
+  color: #081F5C;
 }
 
 h4 {
   font-size: 80px;
   margin-top: 10px;
+  color: #081F5C;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+      font-size: 40px;
+  }
 }
 
 h5 {
   font-size: 25px;
   color: #334eac;
+  margin-top: 80px;
 }
 
-h6 {
-  font-size: 20px;
-  color: #081F5C
-}
-
-.city-dot {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #f7f2eb;
+.text-home {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
   color: #081F5C;
-  display: flex;             
-  justify-content: center;    /* Center text horizontally */
-  align-items: center;        /* Center text vertically */
-  font-family: "MADE Tommy Soft";
-  font-size: 20px;
-  font-weight: 500;
-  border: 3px solid #081F5C;
-  cursor: pointer;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
 }
 
-@media (max-width: 800px){
-  .city-dot{
-  width: 30px;
-  height: 30px;
-  font-size: 12px;
-}
-}
-
-.city-dot a {
-  color: #081F5C;
-  text-decoration: none;
-}
-
-.city-dot:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s;
-}
-
-.hidden {
-  display: none;
-}
-
-.overlay-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 1000px;
-  text-align: center;
-}
-
-.map-container {
-  display: flex;
-  justify-content: center; 
-  height: auto;            /* Container nimmt die volle Höhe des Viewports ein */
-  width: 70%;
-  margin: 50px auto;
-  position: relative;
-  margin-bottom: 50px;
-}
-
-@media screen and (max-width: 768px) {
-  .map-container {
+@media screen and (max-width: 50px) {
+  .text-home {
     width: 100%;
     height: auto; 
     }
   }
 
-.img-KarteCH {
-  width: 100%;
-  height: 505px;
-  flex-shrink: 0;
-
-  background-image: url('KarteSchweiz/Karte\ Schweiz.png');
-  background-size: contain;  /* Adjust this to "cover" if needed */
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+.text-home2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
+  color: #081F5C;
+  padding: 2% 10% 0 10%;
 }
 
-.zürich-karte {
-  width: 625px;
-  height: 406px;
-  flex-shrink: 0;
+@media screen and (max-width: 50px) {
+  .text-home2 {
+    width: 100%;
+    height: auto; 
+    }
+  }
+
+/* Schweiz Karte SVG */
+.cls-1 {
+  fill: #f6f6f6;
+}
+
+.cls-2 {
+  fill: #f7f2eb;
+  opacity: 0.8;
+}
+
+.cls-3 {
+  fill: #c6c6c6;
+}
+
+.cls-4 {
+  fill: #c7c7c7;
+}
+
+.cls-5 {
+  font-size: 20px;
+}
+
+.cls-5, .cls-6 {
+  fill: #081f5c;
+  font-family: "MADETommySoft-ExtraBold", 'MADE Tommy Soft';
+  font-weight: 700;
+}
+
+.cls-6 {
+  font-size: 19.97px;
+}
+
+.cls-7 {
+  fill: #f9f9f9;
+}
+
+.cls-8 {
+  fill: #c5c5c5;
+}
+
+.cls-9 {
+  fill: #fafafa;
+}
+
+.cls-10 {
+  fill: #f8f8f8;
+}
+
+.cls-11 {
+  fill: #002060;
+}
+
+.cls-12 {
+  fill: #fbfbfb;
+}
+
+.cls-13 {
+  fill: #fcfcfc;
+}
+
+.cls-14 {
+  letter-spacing: -0.03em;
+}
+
+.cls-15 {
+  letter-spacing: -0.03em;
+}
+
+.cls-16 {
+  fill: none;
+  stroke: #081f5c;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.cls-17 {
+  fill: #fdfdfd;
+}
+
+.chkarte_home {
+padding: 50px;
+max-height: 600px;
+width: 100%;
+}
+
+
+
+
+/* Schweizer Orte CSS */
+.map-container {
+  width: 100%;
+  max-height: 500px;
+  padding: 30px 0 50px 0;
+  align-items: center;
 }
 
 .flex-container {
   display: flex;
   width: 100%;
-  height: 500px;
+  max-height: auto;
+  align-items: center;
 }
 
-#aqiChart {
-  padding: 50px;
-  font-family: MADE Tommy Soft;
-  font-size: 10px;
-  color: #081F5C;
-  margin-bottom: 200px;
+@media screen and (max-width: 885.81px) {
+  .map-container {
+      flex-direction: column;
+  }
+
+  .flex-container {
+      flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .map-container {
+      flex-direction: column;
+  }
+
+  .flex-container {
+      flex-direction: column;
+  }
 }
 
 .title {
@@ -210,13 +282,175 @@ h6 {
   box-sizing: border-box;
 }
 
+h6 {
+  font-size: 20px;
+  font-family: MADE Tommy Soft;
+  color: #081F5C;
+  padding: 10% 10% 0 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .h6 {
+    width: 100%;
+    height: auto; 
+    }
+  }
+
+.text-diagramm {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
+  color: #081F5C;
+  padding: 2% 10% 0 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .text-diagramm {
+    width: 100%;
+    height: auto; 
+    }
+  }
+
+#aqiChart {
+  padding: 80px;
+  font-family: MADE Tommy Soft;
+  font-size: 10px;
+  color: #081F5C;
+  margin-bottom: 100px;
+  min-width: 300px; /* Minimum width */
+  min-height: 300px; /* Minimum height */
+  width: 100%; /* Full width responsiveness */
+  height: auto; 
+}
+
+@media screen and (max-width: 768px) {
+  #aqiChart {
+    padding: 40px; /* Reduced padding for mobile */
+    min-width: 250px; /* Smaller minimum width for smaller devices */
+    min-height: 250px; /* Smaller minimum height for smaller devices */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #aqiChart {
+    padding: 20px; /* Further reduced padding for small screens */
+    min-width: 200px; /* Further smaller minimum width for very small devices */
+    min-height: 200px; /* Further smaller minimum height */
+  }
+}
+
+/* AQI Richtwerte*/
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(8, 31, 92, 1);
+}
+
+.AQI-Text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
+  padding-top: 10px;
+}
+
+.info-section {
+  padding: 20px;
+  border-left: 4px solid #081F5C;
+}
+
+.info-section h2 {
+  font-family: 'MADE Tommy Soft', sans-serif;
+  color: #081f5c;
+}
+
+.info-section h3 {
+  font-family: 'MADE Tommy Soft', sans-serif;
+  color: #333;
+}
+
+.richtwerte {
+  color: #081F5C;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+li:nth-child(1) {
+  background-color: rgba(107, 124, 0, 0.8)
+}
+
+li:nth-child(2) {
+  background-color: rgba(189, 188, 62, 0.8)
+}
+
+li:nth-child(3) {
+  background-color: rgba(252, 197, 49, 0.8)
+}
+
+li:nth-child(4) {
+  background-color: rgba(248, 182, 5, 0.8)
+}
+
+li:nth-child(5) {
+  background-color: rgba(232, 41, 63, 0.8)
+}
+
+li:nth-child(6) {
+  background-color: rgba(156, 3, 31, 0.8)
+}
+
+ul li:hover {
+  background-color: #d3d3d3
+}
+
+/* Tooltip styling */
+ul li::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(8, 31, 92, 1);
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap; /* Prevent tooltip text from wrapping */
+  opacity: 0; /* Hide tooltip by default */
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip on hover */
+ul li:hover::after {
+  opacity: 1;
+}
+
+
+
+/* Footer */
 .footer {
   width: 100%;
   padding: 20px;
   bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
 .footer-content {
@@ -227,6 +461,7 @@ h6 {
   font-size: 16px;
   color: #334eac;
   margin-bottom: 10px;
+  margin-top: 100px;
 }
 
 .city-list {
@@ -251,52 +486,3 @@ h6 {
       gap: 10px;
   }
 }
-
-
-
-.text-home {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 17px;
-  color: #081F5C;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 5%;
-}
-
-@media screen and (max-width: 50px) {
-  .text-home {
-    width: 100%;
-    height: auto; 
-    }
-  }
-
-  .text-home2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 17px;
-    color: #081F5C;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 2%;
-    padding-bottom: 10%;
-  }
-  
-  @media screen and (max-width: 50px) {
-    .text-home2 {
-      width: 100%;
-      height: auto; 
-      }
-    }
-
-
-  .text-diagramm {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 17px;
-    color: #081F5C;
-  }
-
-  @media screen and (max-width: 50px) {
-    .text-diagramm {
-      width: 100%;
-      height: auto; 
-      }
-    }
