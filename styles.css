@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('fonts/MADE\ Tommy\ Soft\ Bold\ PERSONAL\ USE.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'MADE Tommy Soft', sans-serif;
+  background-color: #f0f4fa;
+  background: linear-gradient(180deg, #EDF1F6 85%, #D0E3FF 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  background-color: #d9e6ff;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+} 
+
+header .logo {
+  width: 100px;
+}
+
+nav a, nav p {
+  text-decoration: none;
+  color: #081F5C;
+  font-family: "MADE Tommy Soft";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+h1, h2, h5 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  color: #081F5C;
+}
+
+h2 {
+  font-size: 25px;
+  color: #081F5C;
+}
+
+h3, h4 {
+  text-align: Left;
+  color: #081F5C;
+  margin: 40px;
+}
+
+h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 125px;
+}
+
+h4 {
+  font-size: 80px;
+  margin-top: 10px;
+}
+
+h5 {
+  font-size: 25px;
+  color: #334eac;
+}
+
+h6 {
+  font-size: 20px;
+  color: #081F5C
+}
+
+.city-dot {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f7f2eb;
+  color: #081F5C;
+  display: flex;             
+  justify-content: center;    /* Center text horizontally */
+  align-items: center;        /* Center text vertically */
+  font-family: "MADE Tommy Soft";
+  font-size: 20px;
+  font-weight: 500;
+  border: 3px solid #081F5C;
+  cursor: pointer;
+}
+
+@media (max-width: 800px){
+  .city-dot{
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+}
+}
+
+.city-dot a {
+  color: #081F5C;
+  text-decoration: none;
+}
+
+.city-dot:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center; 
+  height: auto;            /* Container nimmt die volle Höhe des Viewports ein */
+  width: 70%;
+  margin: 50px auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .map-container {
+    width: 100%;
+    height: auto; 
+    }
+  }
+
+.img-KarteCH {
+  width: 100%;
+  height: 505px;
+  flex-shrink: 0;
+
+  background-image: url('KarteSchweiz/Karte\ Schweiz.png');
+  background-size: contain;  /* Adjust this to "cover" if needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.zürich-karte {
+  width: 625px;
+  height: 406px;
+  flex-shrink: 0;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+#aqiChart {
+  padding: 50px;
+  font-family: MADE Tommy Soft;
+  font-size: 10px;
+  color: #081F5C;
+  margin-bottom: 200px;
+}
+
+.title {
+  color: #081F5C; 
+  text-align: center;
+  font-family: "MADE Tommy Soft";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: 16px;
+  color: #334eac;
+  margin-bottom: 10px;
+}
+
+.city-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.city-list a{
+  text-decoration: none;
+  color: #081F5C;
+}
+
+.city {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .city-list {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+
+
+.text-home {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
+  color: #081F5C;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+@media screen and (max-width: 50px) {
+  .text-home {
+    width: 100%;
+    height: auto; 
+    }
+  }
+
+  .text-home2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    color: #081F5C;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 10%;
+  }
+  
+  @media screen and (max-width: 50px) {
+    .text-home2 {
+      width: 100%;
+      height: auto; 
+      }
+    }
+
+
+  .text-diagramm {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    color: #081F5C;
+  }
+
+  @media screen and (max-width: 50px) {
+    .text-diagramm {
+      width: 100%;
+      height: auto; 
+      }
+    }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Quality Switzerland</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav>
+      <div>
+        <img class="logo" src="Logo/Wind Logo.png" alt="Logo" />
+        <p style="font-family: MADE Tommy Soft;">Air Quality Switzerland</p>
+      </div>
+      <a href="index.html" style="font-family: MADE Tommy Soft;">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Page Content -->
+    <section class="homepage">
+      <h2 style="font-family: MADE Tommy Soft;"> Welcome to</h2>
+      <h1 style="font-family: MADE Tommy Soft;">Air Quality Switzerland</h1>
+      <h5 style="font-family: MADE Tommy Soft;"> Luftqualität in der Schweizer</h5>
+
+      <div class="text-home">
+        <p> 
+          Zur Analyse der Luftqualität an verschiedenen Schweizer Orten zeigen wir die Entwicklung der Luftqualität der letzten zehn Tage für ausgewählte Orte in der Schweiz. Die Analyse berücksichtigt die Temperatur, Windgeschwindigkeit und den Luftqualitätsindex (AQI), um zu verstehen, wie diese Faktoren die Luftverschmutzung beeinflussen.
+        </p>
+      </div>
+
+      <div class="map-container">
+        <!-- <img class="img-KarteCH" src="IM3 NEU/Karte Schweiz.png" alt="Map of Switzerland" id="swiss-map"> -->
+        <div class="img-KarteCH">
+          <div class="city-dot zurich" style="top: 100px; left: 315px;" data-city="zurich"><a href="./zurich.html">ZH</a></div>
+          <div class="city-dot bern" style="top: 180px; left: 115px;" data-city="bern"><a href="./bern.html">BE</a></div>
+          <div class="city-dot davos" style="top: 230px; left: 520px;" data-city="davos"><a href="./davos.html">GR</a></div>
+          <div class="city-dot chur" style="top: 200px; left: 450px;" data-city="chur"><a href="./chur.html">GR</a></div>
+          <div class="city-dot lugano" style="top: 430px; left: 360px;" data-city="lugano"><a href="./lugano.html">TI</a></div>
+          <div class="city-dot jungfraujoch" style="top: 290px; left: 190px;" data-city="jungfraujoch"><a href="./jungfraujoch.html">VS</a></div>
+          <div class="city-dot martignycombe" style="top: 400px; left: 60px;" data-city="martignycombe"><a href="./martigny_combe.html">VS</a></div>
+        </div>
+      </div>
+
+      <div class="text-home2">
+      <p>
+        Die ausgewählten Orte sind Zürich, Chur, Davos, Bern, Lugano, Martigny-Combe und das Jungfraujoch. Anhand dieser Auswahl ist es möglich, verschiedene klimatische und geografische Bedingungen zu berücksichtigen, insbesondere den Einfluss der Höhe auf die Luftqualität. 
+        <br>
+        <br>
+        Klicken Sie auf einen Ort, um die detaillierten Daten und Diagramme zur Luftqualität der letzten zehn Tage zu sehen.
+      </p>
+
+    </div>
+      
+  </main>
+
+<script src="script.js"></script>
+
+<footer class="footer">
+  <div class="footer-content">
+      <p>Air Quality der letzten 10 Tage in:</p>
+      <div class="city-list">
+          <span class="city"><a href=zurich.html>ZURICH</a></span>
+          <span class="city"><a href=chur.html>CHUR</a></span>
+          <span class="city"><a href=lugano.html>LUGANO</a></span>
+          <span class="city"><a href=davos.html>DAVOS</a></span>
+          <span class="city"><a href=bern.html>BERN</a></span>
+          <span class="city"><a href=jungfraujoch.html>JUNGFRAUJOCH</a></span>
+          <span class="city"><a href=martigny_combe.html>MARTIGNY-COMBE</a></span>
+      </div>
+  </div>
+  
+</body>
+</html>
