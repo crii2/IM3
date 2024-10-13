@@ -82,7 +82,7 @@ async function getAirQualityData() {
                   labels: {
                       font: {
                           size: 14,
-                          family: 'Arial, sans-serif'
+                          family: 'Gill Sans'
                       },
                       padding: 30, // Extra padding between legend items
                       usePointStyle: true, // Use point-style markers
@@ -99,7 +99,7 @@ async function getAirQualityData() {
                   titleColor: '#000',
                   bodyColor: '#333',
                   bodyFont: {
-                      family: 'Arial, sans-serif',
+                      family: 'Gill Sans',
                       size: 12
                   },
                   callbacks: {
