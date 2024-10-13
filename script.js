@@ -32,21 +32,6 @@ function showCityDetails(cityKey) {
       <p>AQI (Air Quality Index): ${aqi}</p>
       <canvas id="aqiChart"></canvas>
     `;
-    
-    // Initialize chart after showing data
-    /*const ctx = document.getElementById('aqiChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['2024-09-01', '2024-09-02', '2024-09-03', '2024-09-04', '2024-09-05'], // Replace with actual time data
-        datasets: [{
-          label: 'AQI',
-          data: [aqi, aqi - 10, aqi - 5, aqi + 5, aqi - 15], // Replace with real historical data
-          borderColor: 'rgba(75, 192, 192, 1)',
-          fill: false
-        }]
-      }
-    });*/
   });
 
   cityDetails.classList.remove('hidden');
