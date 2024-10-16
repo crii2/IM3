@@ -16,3 +16,4 @@ Herausforderungen:
 Umgang mit mehrfachen Datensätzen pro Tag und Tagesdurchschnittswerte berechnen.
 Kleine Fehler im html und css suchen und beheben.
 Designprobleme im Header gelöst durch Flexboxen und der Schweiz Karte, welche ich in ein SVG umwandeln musste.
+Von einem Ort Daten nicht gespeichert und vom anderen Ort hatte die API doch keine Daten, obwohl nachgeschaut wurde. Also musste ich spontan zwei Orte herausstreichen, was schade war. Es hätte mir nicht mehr gereicht, nochmals Daten abzuspeichern bzw. hätte ich dann nur Daten von 3 Tagen gehabt.

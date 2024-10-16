@@ -55,48 +55,39 @@ $pollution_date = null;
 $pollution_time = null;
 
 if ($pollution_ts) {
-    // Convert the ISO 8601 string to a DateTime object (handles the Z for UTC)
     $dateTime = new DateTime($pollution_ts);
-
-    // Extract the date in Y-m-d format (e.g., 2024-10-05)
     $pollution_date = $dateTime->format('Y-m-d');
-
-    // Extract the time in H:i:s format (e.g., 16:00:00)
     $pollution_time = $dateTime->format('H:i:s');
 }
 
-// Prepare the SQL statement with placeholders for all required fields
 $sql = "INSERT INTO AirQualityWeatherData
     (city, state, country, longitude, latitude, pollution_ts, pollution_date, pollution_time, aqius, mainus, weather_ts, temperature, wind_speed) 
     VALUES (:city, :state, :country, :longitude, :latitude, :pollution_ts, :pollution_date, :pollution_time, :aqius, :mainus, :weather_ts, :temperature, :wind_speed)";
 
 $stmt = $pdo->prepare($sql);
 
-// Insert data into the database
 if (isset($data['data']['location']['coordinates'][0]) && isset($data['data']['location']['coordinates'][1])) {
-    // Extract longitude and latitude from the coordinates array
     $longitude = $data['data']['location']['coordinates'][0];
     $latitude = $data['data']['location']['coordinates'][1];
 
-    // Execute the statement with data from the API response
     $stmt->execute([
-        ':city' => $data['data']['city'] ?? null,  // Handle nullable city
-        ':state' => $data['data']['state'] ?? null,  // Handle nullable state
-        ':country' => $data['data']['country'] ?? null,  // Handle nullable country
-        ':longitude' => $longitude,  // Longitude (mandatory)
-        ':latitude' => $latitude,  // Latitude (mandatory)
-        ':pollution_ts' => $pollution_ts,  // Pollution timestamp
-        ':pollution_date' => $pollution_date,  // Extracted pollution date
-        ':pollution_time' => $pollution_time,  // Extracted pollution time
-        ':aqius' => $data['data']['current']['pollution']['aqius'] ?? null,  // Handle nullable AQI (US)
-        ':mainus' => $data['data']['current']['pollution']['mainus'] ?? null,  // Handle nullable main pollutant (US)
-        ':weather_ts' => $data['data']['current']['weather']['ts'] ?? null,  // Handle nullable weather timestamp
-        ':temperature' => $data['data']['current']['weather']['tp'] ?? null,  // Handle nullable temperature
-        ':wind_speed' => $data['data']['current']['weather']['ws'] ?? null  // Handle nullable wind speed
+        ':city' => 'Bern',
+        ':state' => 'Bern',
+        ':country' => 'Switzerland',
+        ':longitude' => $longitude,
+        ':latitude' => $latitude,
+        ':pollution_ts' => $pollution_ts,
+        ':pollution_date' => $pollution_date,
+        ':pollution_time' => $pollution_time,
+        ':aqius' => $data['data']['current']['pollution']['aqius'] ?? null,
+        ':mainus' => $data['data']['current']['pollution']['mainus'] ?? null,
+        ':weather_ts' => $data['data']['current']['weather']['ts'] ?? null,
+        ':temperature' => $data['data']['current']['weather']['tp'] ?? null,
+        ':wind_speed' => $data['data']['current']['weather']['ws'] ?? null
     ]);
 
-    echo "Data successfully inserted into the database for city: " . $data['data']['city'] . ".\n";
+    echo "Data successfully inserted into the database for city: Bern.\n";
 } else {
-    echo "Skipping entry for city: " . ($data['data']['city'] ?? 'Unknown') . " due to missing coordinates.\n";
+    echo "Skipping entry for city: Bern due to missing coordinates.\n";
 }
 ?>

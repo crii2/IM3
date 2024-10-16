@@ -10,18 +10,19 @@
 body {
   margin: 0;
   font-family: 'MADE Tommy Soft', sans-serif;
-  background-color: #EDF1F6;
-  background: linear-gradient(180deg, #EDF1F6 85%, #D0E3FF 100%);
+
+  /* background-color: #EDF1F6; */
+  /* background: linear-gradient(180deg, #EDF1F6 85%, #D0E3FF 100%); */
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
-  /*background-image: url('wind_gif/Wind GIF.png');
-  background-size: cover; 
-  background-position: center;  
-  background-repeat: no-repeat; 
-  background-color: transparent; 
-  */
+
+  background-color: #EDF1F6;
+  background-image: url('https://etl.mmp.li/Air_Quality_Schweiz/wind_gif/wind_animated.gif');
+  background-size: 150%; /* Hintergrund vergrößern, damit der Effekt flüssiger wirkt */
+  background-position: 0 50%; /* Initiale Position (links zentriert) */
+
 }
 
 header {
@@ -155,7 +156,7 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px 60px 20px 60px;
+    margin: 20px 60px 0 60px;
   }
   
   .text1-container,
@@ -180,7 +181,7 @@ h5 {
   }
   
   .text3-anleitung {
-    padding: 0 20% 0 20%;
+    padding: 5% 10% 0 10%;
     font-family: 'Gill Sans';
     color: #081F5C;
     text-align: center;
@@ -266,12 +267,169 @@ h5 {
 }
 
 .chkarte_home {
-padding: 50px;
+padding: 50px 50px 70px 50px;
 max-height: 600px;
 width: 100%;
 }
 
+.vergleich_text {
+  font-family: 'Gill Sans';
+  font-size: 17px;
+  color: #081F5C;
+  padding: 2% 10% 5% 10%;
+}
 
+/* Styling Vergleich ZH BE TI*/
+
+#svgVergleich {
+  width: 50%;
+  /* display: flex; */
+  align-content: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #svgVergleich {
+    min-width: 350px; 
+    min-height: 350px; 
+  }
+}
+
+.cls-18, .cls-19, .cls-20, .cls-21, .cls-22 {
+  font-family: MADETommySoft-ExtraBold, 'MADE Tommy Soft';
+  font-weight: 700;
+}
+
+.cls-19, .cls-23, .cls-24 {
+  fill: #081f5c;
+}
+
+.cls-19, .cls-24 {
+  font-size: 17px;
+}
+
+.cls-25 {
+  fill: #f7f2eb;
+}
+
+.cls-26 {
+  font-family: MyriadPro-Regular, 'Myriad Pro';
+}
+
+.cls-20 {
+  letter-spacing: -.07em;
+}
+
+.cls-27 {
+  fill: #bad6eb;
+}
+
+.cls-28 {
+  fill: #d0e3ff;
+}
+
+.cls-21 {
+  letter-spacing: -.02em;
+}
+
+.cls-22, .cls-29 {
+  letter-spacing: 0em;
+}
+
+.cls-30 {
+  fill: none;
+  stroke: #081f5c;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.cls-31 {
+  letter-spacing: -.03em;
+}
+
+.cls-32 {
+  fill: #7096d1;
+}
+
+/* Styling Vergleich GR VS */
+
+#svgVergleich2 {
+  width: 40%;
+  /* display: flex; */
+  align-content: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #svgVergleich2 {
+    min-width: 300px; 
+    min-height: 300px; 
+  }
+}
+
+.cls-33, .cls-34, .cls-35, .cls-36, .cls-37 {
+  font-family: MADETommySoft-ExtraBold, 'MADE Tommy Soft';
+  font-weight: 700;
+}
+
+.cls-34, .cls-38, .cls-39 {
+  fill: #081f5c;
+}
+
+.cls-34, .cls-39 {
+  font-size: 17px;
+}
+
+.cls-40 {
+  fill: #f7f2eb;
+}
+
+.cls-41 {
+  font-family: MyriadPro-Regular, 'Myriad Pro';
+}
+
+.cls-35 {
+  letter-spacing: -.07em;
+}
+
+.cls-42 {
+  fill: #bad6eb;
+}
+
+.cls-43 {
+  fill: #d0e3ff;
+}
+
+.cls-36, .cls-44 {
+  letter-spacing: -.02em;
+}
+
+.cls-37, .cls-45 {
+  letter-spacing: 0em;
+}
+
+.cls-46 {
+  fill: none;
+  stroke: #081f5c;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.cls-47 {
+  letter-spacing: -.06em;
+}
+
+.cls-48 {
+  letter-spacing: -.04em;
+}
+
+.cls-49 {
+  letter-spacing: -.03em;
+}
+
+.cls-50 {
+  letter-spacing: 0em;
+}
 
 
 /* Schweizer Orte CSS */
@@ -381,8 +539,8 @@ h6 {
 @media screen and (max-width: 768px) {
   #aqiChart {
     padding: 40px; 
-    min-width: 250px; 
-    min-height: 250px; 
+    min-width: 200px; 
+    min-height: 200px; 
   }
 }
 
@@ -542,3 +700,69 @@ ul li:hover::after {
       gap: 10px;
   }
 }
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.bubble {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bubble span {
+    position: absolute;
+    display: block;
+}
+
+.label {
+    top: -30px;
+    font-weight: bold;
+}
+
+.data {
+    bottom: 10px;
+}
+
+.zurich {
+    width: 120px;
+    height: 120px;
+    background-color: #FF5733;
+}
+
+.bern {
+    width: 110px;
+    height: 110px;
+    background-color: #33FF57;
+}
+
+.lugano {
+    width: 125px;
+    height: 125px;
+    background-color: #3357FF;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .label {
+        top: -20px;
+    }
+
+    .data {
+        bottom: 5px;
+    }
+}
+
+
